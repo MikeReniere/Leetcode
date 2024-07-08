@@ -1,0 +1,16 @@
+import re
+class Solution:
+    def isPalindrome(s: str) -> bool:
+        newString =  re.sub('[\W_]+', '', s)
+        lowerString = newString.lower()
+        print(lowerString)
+        reverse = lowerString[::-1]
+
+        if reverse == lowerString:
+            return True
+        else: 
+            return False
+
+
+    s = "A man, a plan, a canal: Panama"
+    isPalindrome(s)
